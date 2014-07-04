@@ -1,0 +1,190 @@
+.products-body
+
+	position: fixed
+	background: url('../../files/images/bg9.jpg') no-repeat center center fixed
+	// background-color: #da676b
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+
+.logo-mini
+
+	position: absolute
+	width: 400px
+	height: 275px
+	top: 10px
+	right: 10px
+	background: url('../../files/images/logo-mini.png')
+	cursor: pointer
+	@include transition(all .4s)
+
+	&:hover
+
+		@include transform(scale3d(1.05, 1.05, 1.05))
+
+
+.products-panel
+
+	position: fixed
+	top: 100px
+	bottom: 0
+	right: 30px
+	width: 330px
+	background: url('../../files/images/bg-white.png') repeat
+	padding: 200px 20px 10px 5px
+
+.products-content
+
+	position: fixed
+	top: 80px
+	bottom: 0
+	right: 460px
+	left: 0
+	padding: 20px 10px
+	overflow-y: scroll
+
+.product-item
+
+	position: relative
+	float: right
+	width: 260px
+	height: 260px
+	cursor: pointer
+	overflow: visible
+	opacity: 0
+	@include transition(all .4s)
+
+	&:hover
+
+		> .product-icon
+
+			@include transform(scale3d(1.2, 1.2, 1.2) rotateZ(20deg))
+
+		> .product-icon-title
+
+			// font-size: 20px
+			// font-weight: bold
+			// line-height: 50px
+			padding: 20px
+			top: -30px
+			left: 30px
+			opacity: 1
+
+		// > .product-icon-title span
+
+		// 	visibility: visible
+
+.product-icon
+
+	position: absolute
+	margin: 30px
+	width: 200px
+	height: 200px
+	@include transition(all .4s)
+
+
+.product-icon-title
+
+	position: relative
+	max-width: 180px
+	margin-right: auto
+	margin-left: auto
+	border-radius: 2px
+	font-family: 'Yekan'
+	font-size: 18px
+	line-height: 30px
+	margin-top: 230px
+	color: black
+	text-align: center
+	top: 0
+	left: 0
+	height: auto
+	background-color: white
+	opacity: .5
+	padding: 5px
+	@include border-radius(3px)
+	@include transition(all .4s)
+
+	// span
+
+	// 	font-size: 14px
+	// 	visibility: hidden
+
+.label
+
+	color: black
+	margin: 5px 10px
+
+
+.mj-radiogroup
+
+	position: relative
+	clear: both
+	margin-top: 5px
+	list-style: none
+	// height: 50px
+	width: auto
+
+.mj-radio
+
+	position: relative
+	float: right
+	font-family: "Yekan"
+	padding: 5px 15px
+	color: #000
+	background-color: #AAA
+	border-radius: 4px
+	cursor: pointer
+	height: 30px
+	margin: 5px
+	overflow: hidden
+	@include transition(all .4s)
+
+	&:hover
+
+		background-color: #777
+		color: #FFF
+
+.selected
+
+	background-color: #15b000
+	color: #FFF
+
+	&:hover
+
+		background-color: lighten(#15b000, 10)
+		color: #FFF
+
+
+.dom-radio
+
+	display: none
+
+
+
+.product-adder
+
+	position: relative
+	float: right
+	width: 150px
+	height: 150px
+	cursor: pointer
+	background-color: white
+	margin-right: 40px
+	margin-top: 80px
+	font-size: 60px
+	font-weight: bold
+	line-height: 150px
+	text-align: center
+	color: black
+	opacity: 0
+	@include border-radius(4px)
+	@include transition(all .4s)
+
+	&:hover
+
+		opacity: .99
+		margin-top: 80px
+		@include transform(scale3d(1.1, 1.1, 1.1))
+		@include border-radius(40px)

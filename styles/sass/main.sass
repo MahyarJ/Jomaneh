@@ -1,0 +1,363 @@
+@import "compass/utilities/general"
+@import "compass/css3"
+
+@import "imports/reset"
+@import "imports/products"
+@import "imports/window"
+@import "imports/arrow"
+@import "imports/news"
+@import "imports/radios"
+
+
+
+$titleColor: #430620
+
+h2
+
+	font-size: 14px
+	color: black
+	margin: 10px 5px 5px 0
+
+.sky
+
+	position: fixed
+	background: url('../../files/images/bg5.jpg') no-repeat center center
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+
+.white-box
+
+	position: absolute
+	left: 0
+	right: 0
+	height: 150px
+	border-top: 15px solid #ff0000
+	background: url('../../files/images/bg-white.png') repeat
+
+.cloud-back
+
+	position: absolute
+	background: url('../../files/images/cloud01.png') no-repeat
+	width: 3577px
+	height: 1080px
+	top: 0
+	left: -3577px
+
+.cloud
+
+	position: absolute
+	background: url('../../files/images/cloud01.png') no-repeat
+	width: 3577px
+	height: 1080px
+	top: 0
+	left: -3577px
+
+.logo
+
+	position: absolute
+	right: 0
+	// left: 0
+	top: 0
+	width: 400px
+	height: 275px
+	opacity: 0
+	background: url('../../files/images/logo-mini.png') no-repeat
+	cursor: pointer
+	@include transform-style(preserve-3d)
+	@include transition(transform .4s)
+
+	&:hover
+
+		@include transform(scale3d(1.1, 1.1, 1.1))
+
+.enter-notice
+
+	position: relative
+	margin-right: auto
+	margin-left: auto
+	top: 50px
+	width: 280px
+	height: 250px
+	opacity: 0
+	background: url('../../files/images/enter-notice.png') no-repeat
+	@include transition(all 2s)
+
+.pane
+
+	position: absolute
+	direction: ltr
+	text-align: left
+	left: 0
+	bottom: 0
+	right: 0
+	background-color: #000
+	opacity: .9
+	height: 50px
+	font-size: 24px
+
+label
+
+	position: relative
+	width: 500px
+	height: 100px
+	font-size: 24px
+	padding-left: 10px
+
+.textbox
+
+	position: relative
+	background-color: transparent
+	width: 100px
+	color: #FFF
+	z-index: 5
+	border: none
+	font-size: 32px
+	padding-right: 100px
+
+.login-box
+
+	position: relative
+	margin-right: auto
+	margin-left: auto
+	top: 200px
+	padding: 5px
+	// background-color: transparent !important
+	width: 412px
+	text-align: center
+	// background: url('../../files/images/bg-white.png') repeat
+	@include border-radius(5px)
+
+	input
+
+		position: relative
+		float: right
+		width: 380px
+		font-size: 18px
+		color: #000
+		padding: 2px 5px
+		border: 1px dotted #000
+		margin: 10px
+		clear: both
+		@include border-radius(5px)
+
+
+.btn
+
+	position: relative
+	background-color: yellow
+	color: black
+	width: 200px !important
+	height: 40px
+	// font-family: 'Yekan'
+	font-size: 18px
+	border: none
+
+.menu-title
+
+	font-weight: bold
+	color: #FF0000
+	top: 50px
+
+
+.main-menu
+
+	position: absolute
+	top: 0
+	right: 0
+	width: 330px
+	height: 140px
+	@include transition(all .4s)
+
+.menu-item
+
+	position: relative
+	width: 100px
+	height: 100px
+	margin: 5px
+	float: left
+	opacity: .8
+	cursor: pointer
+	@include transition(all .4s)
+
+	&.products
+
+		background: url('../../files/images/icons/menu-item-3.png') no-repeat center center
+		background-size: 100px 100px
+
+	&.news
+
+		background: url('../../files/images/icons/menu-item-2.png') no-repeat center center
+		background-size: 100px 100px
+
+	&.contactus
+
+		background: url('../../files/images/icons/menu-item-1.png') no-repeat center center
+		background-size: 100px 100px
+
+	&:hover
+
+		@include transform(translateY(10px))
+		opacity: 1
+
+
+.aboutus-box
+
+	position: absolute
+	right: 100px
+	top: 200px
+	background: white
+	width: 0
+	height: 0
+	opacity: 0
+	max-width: 800px
+	max-height: 800px
+	@include border-radius(10px)
+
+	p
+
+		position: absolute
+		font-family: 'Yekan'
+		line-height: 32px
+		top: 30px
+		bottom: 30px
+		right: 30px
+		left: 30px
+		color: black
+		font-size: 18px
+		list-style-type: square
+		padding-right: 200px
+		text-align: justify
+		opacity: 0
+
+	.close
+
+		position: absolute
+		background: url('../../files/images/close2.png')
+		width: 32px
+		height: 32px
+		bottom: 15px
+		right: 15px
+		cursor: pointer
+		opacity: .7
+		@include transition(all .4s)
+
+		&:hover
+
+			opacity: 1
+
+.contactus-box
+
+	position: absolute
+	left: 100px
+	top: 200px
+	background: white
+	width: 0
+	height: 0
+	opacity: 0
+	max-width: 800px
+	max-height: 800px
+	@include border-radius(10px)
+
+	p
+
+		position: absolute
+		font-family: 'Yekan'
+		line-height: 32px
+		top: 30px
+		bottom: 30px
+		right: 30px
+		left: 30px
+		color: black
+		font-size: 18px
+		list-style-type: square
+		padding-left: 200px
+		text-align: justify
+		opacity: 0
+
+	.close
+
+		position: absolute
+		background: url('../../files/images/close2.png')
+		width: 32px
+		height: 32px
+		bottom: 15px
+		left: 15px
+		cursor: pointer
+		opacity: .7
+		@include transition(all .4s)
+
+		&:hover
+
+			opacity: 1
+
+.news-box
+
+	position: absolute
+	bottom: 80px
+	background: white
+	width: 1000px
+	height: 0
+	opacity: 0
+	max-height: 300px
+	@include border-radius(10px 10px 10px 10px)
+
+	.close
+
+		position: absolute
+		background: url('../../files/images/close2.png')
+		width: 32px
+		height: 32px
+		top: 15px
+		left: 15px
+		cursor: pointer
+		opacity: .7
+		@include transition(all .4s)
+
+		&:hover
+
+			opacity: 1
+
+.products-box
+
+	position: absolute
+	bottom: 40px
+	top: 40px
+	left: 40px
+	height: 0
+	opacity: 0
+	right: 460px
+
+	.close
+
+		position: absolute
+		background: url('../../files/images/close2.png')
+		background-color: transparent
+		width: 32px
+		height: 32px
+		top: 15px
+		left: 15px
+		cursor: pointer
+		opacity: .7
+		@include transition(all .4s)
+
+		&:hover
+
+			opacity: 1
+
+
+.login-btn
+
+	position: absolute
+	bottom: 30px
+	right: 30px
+	background: url('../../files/images/login.png')
+	width: 90px
+	height: 90px
+	cursor: pointer
+	@include transition(all .4s)
+
+	&:hover
+
+		@include transform(rotateZ(365deg))
